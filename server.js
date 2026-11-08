@@ -43,7 +43,7 @@ async function startTikTok() {
   connection = new TikTokLiveConnection(username);
 
   connection.on(WebcastEvent.CHAT, (event) => {
-    const comment = event.comment || "";
+    const comment = event.content || "";
     console.log(comment);
 
     sendToGame({
